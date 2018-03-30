@@ -54,9 +54,7 @@ class ViewController: UIViewController {
             inputIsEmpty = true
         }
     }
- 
-    
-    
+     
     @IBAction func addNumber(_ number: UIButton) {
         
         let symbol = number.currentTitle!
@@ -74,10 +72,6 @@ class ViewController: UIViewController {
         }
     }
     
-
-   
- 
-
     @IBAction func pushOperation(_ operation: UIButton) {
         
         typeOperation = operation.currentTitle!
@@ -87,9 +81,7 @@ class ViewController: UIViewController {
         haveDot = false
 
     }
-    
    
-    
     @IBAction func pushEquals(_ sender: UIButton) {
         
         if inputIsEmpty != true{
@@ -106,13 +98,12 @@ class ViewController: UIViewController {
             case "*":
                 result = numFirst * numSecond
             case "/":
-				if (numSecond == 0){
-					showAlert()
-					pushCancel(sender)
-					
-				} else {
-				result = numFirst / numSecond
-				}
+		if (numSecond == 0){
+			showAlert()
+			pushCancel(sender)			
+		} else {
+		result = numFirst / numSecond
+		}
         
             default:
                 break
